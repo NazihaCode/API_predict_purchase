@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>My First Bootstrap Page</title>
+
+      <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+  
+<!-- Header -->
+<header>
+  <div class="container" id="maincontent" tabindex="-1">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-3 col-sm-offset-3">
+                  <img class="img-responsive img-circle user_profile" src="{{ url_for('static', filename='purchase.png') }}" id="user_image">
+              </div>
+              <div class="col-sm-3">
+                <h3>Marketing prédictif</h3>
+              </div>
+              <div class="col-sm-12">
+                <p id="description" class="blur"> Ce travail s’inscrit dans un champs de recherche: si vous pouviez prédire ce dont vos clients auront envie d'acheter ou non.Notre modèle s’appuie sur la relation Genre, Age et Salaire pour définir le comportement d’achat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="intro-text">
+        <h1 class="name">Prêt-e à savoir que prédire vraiment notre modèle?</h1>
+        <hr class="star-light">
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <p>
+          Veuillez remplir la formulaire afin de connaître les résultats !
+        </p>
+        <p style="margin-top: 20px;">
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true" onlogin='checkLoginState()'></div>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+	<div
+		class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
+		style="background: rgb(46, 47, 94); background: linear-gradient(274deg, rgba(46, 47, 94, 1) 23%, rgba(0, 135, 182, 1) 93%);">
+		<span class="mask bg-gradient-dark opacity-6"></span>
+   <div class="row">   
+	
+	<div class="container">
+		<div class="row mt-lg-10 mt-md-10 mt-10">
+			<div class="col-xl-4 col-lg-5 col-md-7 shadow-lg mx-auto">
+<div class= "card z-index-0"">
+		<div class="card-header text-center pt-4">
+			
+						<h5>Prédiction d'achat</h5>	
+					</div>
+		 <div class= "card-body">			
+     <form action="/predict" method="post" >
+      	   
+  	
+      	   <div class="mb-4">
+      	    <div class="form-group">
+  	     
+			<input type="text" name="Gender" placeholder="Enter 1 for Male and 0 for Female">
+			</div>
+			</div>
+			
+			
+			 <div class="mb-4">
+			<div class="form-group">
+			   
+			<input type="text" name="Age"   placeholder="Enter the age">
+             </div>
+             </div>
+           
+             
+             <div class="form-group border-success mb-4  my-4 mb-2">
+			<input type="text" class = "form-group border-success" name="Salary" placeholder="Enter the Salary">
+			</div>
+		
+		
+			<button "btn main-button w-100 my-4 mb-2"  type="submit" class="btn btn-primary">Prédire</button>
+		</form>
+		</div>
+		
+		</div>
+		</div>
+		           
+</div>
+</div>
+<!-- Main Input For Receiving Query to our ML --> 
+
+
+ </div>     
+</div>
+
+</html>
+
+
+
