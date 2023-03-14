@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python
 
 ## Step 1:
 # Create a working directory
@@ -6,18 +6,10 @@ WORKDIR /app
 
 ## Step 2:
 # Copy source code to working directory
-COPY . api.py /app/
+COPY . .
 
 ## Step 3:
-# Install packages from requirements.txt
-# hadolint ignore=DL3013
-RUN pip install --upgrade pip &&\
-    pip install --trusted-host pypi.python.org -r requirements.txt
 
-## Step 4:
-# Expose port 80
-EXPOSE 5000
-
-## Step 5:
-# Run app.py at container launch
-CMD ["python", "appi.py"]
+# Install packages from requirements
+RUN pip install -r requirements.txt
+CMD [ "python3", "api.py", "--host=0.0.0.0"]

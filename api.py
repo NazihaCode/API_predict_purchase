@@ -18,7 +18,11 @@ from flask import render_template
 
 
 app = Flask(__name__)
-model=pickle.load(open('model.pkl','rb'))
+# Load the trained model from current directory
+
+with open('./model.pkl', 'rb') as model_pkl:
+
+    model = pickle.load(model_pkl)
 #run_with_ngrok(app)
 scaler =StandardScaler()
 @app.route("/")

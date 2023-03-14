@@ -1,4 +1,4 @@
 sklearn
 numpy
 flask
-pickle
+StandardScaler
